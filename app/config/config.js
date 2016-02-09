@@ -1,8 +1,8 @@
 'use strict';
 
-var AppSettings = {
+var Config = {
   appTitle: 'Example Application',
   apiUrl: '/api/v1'
 };
 
-module.exports = AppSettings;
+module.exports = Config;

@@ -2,60 +2,70 @@
 
 module.exports = {
 
-  'browserPort'  : 3000,
-  'UIPort'       : 3001,
-  'serverPort'   : 3002,
+    'browserPort': 3000,
+    'UIPort': 3001,
+    'serverPort': 3002,
 
-  'styles': {
-    'src' : 'app/styles/**/*.scss',
-    'dest': 'build/css',
-    'prodSourcemap': false,
-    'sassIncludePaths': []
-  },
+    'vendor': {
+        'css': {
+            'src': [],
+            'dest': 'dist/css/vendor.css'
+        },
+        'js': {
+            'src': [],
+            'dest': 'dist/js/vendor.js'
+        }
+    },
 
-  'scripts': {
-    'src' : 'app/js/**/*.js',
-    'dest': 'build/js'
-  },
+    'styles': {
+        'src': 'app/**/*.scss',
+        'dest': 'dist/css',
+        'prodSourcemap': false,
+        'sassIncludePaths': []
+    },
 
-  'images': {
-    'src' : 'app/images/**/*',
-    'dest': 'build/images'
-  },
+    'scripts': {
+        'src': 'app/**/*.js',
+        'dest': 'dist/js'
+    },
 
-  'fonts': {
-    'src' : ['app/fonts/**/*'],
-    'dest': 'build/fonts'
-  },
+    'images': {
+        'src': 'app/assets/images/**/*',
+        'dest': 'dist/images'
+    },
 
-  'views': {
-    'watch': [
-      'app/index.html',
-      'app/views/**/*.html'
-    ],
-    'src': 'app/views/**/*.html',
-    'dest': 'app/js'
-  },
+    'fonts': {
+        'src': ['app/assets/fonts/**/*'],
+        'dest': 'dist/fonts'
+    },
 
-  'gzip': {
-    'src': 'build/**/*.{html,xml,json,css,js,js.map,css.map}',
-    'dest': 'build/',
-    'options': {}
-  },
+    'views': {
+        'watch': [
+            'app/index.html',
+            'app/**/*.html'
+        ],
+        'src': 'app/**/!(*index).html',
+        'dest': 'app'
+    },
 
-  'dist': {
-    'root'  : 'build'
-  },
+    'gzip': {
+        'src': 'dist/**/*.{html,xml,json,css,js,js.map,css.map}',
+        'dest': 'dist/',
+        'options': {}
+    },
 
-  'browserify': {
-    'entries'   : ['./app/js/main.js'],
-    'bundleName': 'main.js',
-    'prodSourcemap' : false
-  },
+    'dist': {
+        'root': 'dist'
+    },
 
-  'test': {
-    'karma': 'test/karma.conf.js',
-    'protractor': 'test/protractor.conf.js'
-  }
+    'browserify': {
+        'entries': ['./app/main.js'],
+        'bundleName': 'main.js'
+    },
+
+    'test': {
+        'karma': 'test/karma.conf.js',
+        'protractor': 'test/protractor.conf.js'
+    }
 
 };

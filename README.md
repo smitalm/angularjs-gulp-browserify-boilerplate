@@ -38,41 +38,6 @@ Along with many Gulp libraries (these can be seen in either `package.json`, or a
 
 AngularJS is a MVW (Model-View-Whatever) Javascript Framework for creating single-page web applications. In this boilerplate, it is used for all the application routing as well as all of the frontend views and logic.
 
-The AngularJS files are all located within `/app/js`, structured in the following manner:
-
-```
-/controllers
-  _index.js   (the main module on which all controllers will be mounted, loaded in main.js)
-  example.js
-/directives
-  _index.js   (the main module on which all directives will be mounted, loaded in main.js)
-  example.js
-/services
-  _index.js   (the main module on which all services will be mounted, loaded in main.js)
-  example.js
-constants.js  (any constant values that you want to make available to Angular)
-main.js       (the main file read by Browserify, also where the application is defined and bootstrapped)
-on_run.js     (any functions or logic that need to be executed on app.run)
-on_config.js  (all route definitions and any logic that need to be executed on app.config)
-templates.js  (this is created via Gulp by compiling your views, and will not be present beforehand)
-```
-
-Controllers, services, directives, etc. should all be placed within their respective folders, and will be automatically required via their respective `_index.js` using `bulk-require`. Most other logic can be placed in an existing file, or added in new files as long as it is required inside `main.js`.
-
-##### Dependency injection
-
-Dependency injection is carried out with the `ng-annotate` library. In order to take advantage of this, a simple comment of the format:
-
-```javascript
-/**
- * @ngInject
- */
-```
-
-needs to be added directly before any Angular functions/modules. The Gulp tasks will then take care of adding any dependency injection, requiring you only to specify the dependencies within the function call and nothing more.
-
----
-
 ### SASS
 
 SASS, standing for 'Syntactically Awesome Style Sheets', is a CSS extension language adding things like extending, variables, and mixins to the language. This boilerplate provides a barebones file structure for your styles, with explicit imports into `app/styles/main.scss`. A Gulp task (discussed later) is provided for compilation and minification of the stylesheets based on this file.

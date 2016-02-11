@@ -1,19 +1,17 @@
 'use strict';
 
-var module = require('./_module');
+var angularModule = require('./_module');
 
 /**
  * @ngInject
  */
-function RouteConfig($urlRouterProvider, $stateProvider) {
-    $urlRouterProvider.when('/','/home');
-    
-    // $stateProvider
-    //     .state('app', {
-    //         url: '/',
-    //         templateUrl: 'shell/shell.view.html',
-    //         controller: 'ShellController'
-    //     });
+function RouteConfig($stateProvider) {
+    $stateProvider
+        .state('app', {
+            url: '',
+            templateUrl: 'shell/shell.view.html',
+            controller: 'ShellCtrl'
+        });
 }
 
-module.config(RouteConfig);
+angularModule.config(RouteConfig);

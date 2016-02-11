@@ -1,6 +1,6 @@
 'use strict';
 
-var module = require('./_module.js');
+var angularModule = require('./_module.js');
 
 /**
  * @ngInject
@@ -17,5 +17,4 @@ function exampleDirective() {
   };
 
 }
-
-module.directive('exampleDirective', exampleDirective);
+angularModule.directive('exampleDirective', exampleDirective);

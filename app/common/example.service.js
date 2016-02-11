@@ -1,6 +1,6 @@
 'use strict';
 
-var module = require('./_module.js');
+var angularModule = require('./_module.js');
 
 /**
  * @ngInject
@@ -25,4 +25,4 @@ function ExampleService($q, $http) {
 
 }
 
-module.service('ExampleService', ExampleService);
+angularModule.service('ExampleService', ExampleService);

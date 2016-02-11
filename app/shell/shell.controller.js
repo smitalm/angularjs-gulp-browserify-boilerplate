@@ -1,6 +1,6 @@
 'use strict';
 
-var module = require('./_module');
+var angularModule = require('./_module');
 
 /**
  * @ngInject
@@ -15,4 +15,4 @@ function ShellCtrl() {
 
 }
 
-module.controller('ShellCtrl', ShellCtrl);
+angularModule.controller('ShellCtrl', ShellCtrl);

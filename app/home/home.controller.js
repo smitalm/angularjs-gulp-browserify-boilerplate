@@ -1,6 +1,6 @@
 'use strict';
 
-var module = require('./_module');
+var angularModule = require('./_module');
 
 /**
  * @ngInject
@@ -15,4 +15,4 @@ function HomeCtrl() {
 
 }
 
-module.controller('HomeCtrl', HomeCtrl);
+angularModule.controller('HomeCtrl', HomeCtrl);

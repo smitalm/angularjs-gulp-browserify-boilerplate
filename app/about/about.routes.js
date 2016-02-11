@@ -1,6 +1,6 @@
 'use strict';
 
-var module = require('./_module');
+var angularModule = require('./_module');
 
 /**
  * @ngInject
@@ -9,9 +9,9 @@ function RouteConfig($stateProvider) {
     $stateProvider
         .state('app.about', {
             url: '/about',
-            templateUrl: 'about.view.html',
+            templateUrl: 'about/about.view.html',
             controller: 'AboutCtrl'
         });
 }
 
-module.config(RouteConfig);
+angularModule.config(RouteConfig);
